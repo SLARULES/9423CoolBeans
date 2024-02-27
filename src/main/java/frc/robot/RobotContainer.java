@@ -29,11 +29,14 @@ public class RobotContainer {
 
   public final driveTrainSub m_DriveTrainSub = new driveTrainSub();
   public final driveCommand m_DriveCommand = new driveCommand(m_DriveTrainSub, m_driverController);
+  public final launchSubsystem m_launcherSubsystem = new launcherSubSystem()
+  public final launchCommand m_launchCommand = new launchCommand(m_launcherSubsystem, m_driverController);
   public RobotContainer() {
     // Configure the trigger bindings
     configureBindings();
     CommandScheduler.getInstance().setDefaultCommand(m_DriveTrainSub, m_DriveCommand);
-  }
+    CommandScheduler.getInstance().setDefaultCommand(m_launcherSubsystem, m_launchCommand);
+    }
 
   /**
    * Use this method to define your trigger->command mappings. Triggers can be created via the

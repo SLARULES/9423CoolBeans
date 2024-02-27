@@ -9,12 +9,15 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class LauncherSubSystem extends SubsystemBase {
   /** Creates a new LauncherSubSystem. */
-  PWMSparkMax Launchermotors;
+  PWMSparkMax topMotor;
+  PWMSparkMax bottomMotor;
   public LauncherSubSystem() {
-    launchermotors = new PWMSparkMax(Constants.LAUNCHERPORT);
+    topMotor = new PWMSparkMax(Constants.TOP_MOTOR);
+    bottomMotor = new PWMSparkMax(Constants.BOTTOM_MOTOR);
   }
   public void setlaunchmotors(double power){
-    launchermotors.set(power);
+    topMotor.set(power);
+    bottomMotor.set(power);
   }
   @Override
   public void periodic() {

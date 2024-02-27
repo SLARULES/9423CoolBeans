@@ -19,7 +19,8 @@ public final class Constants {
   public static final double SPEED_LIMITER = 0.8;
   public static final int LEFTSIDEPORT = 1;
   public static final int RIGHTSIDEPORT = 2;
-  public static final int LAUNCHERPORT = 3;
+  public static final int LAUNCHER_TOP = 3;
+  public static final int LAUNCHER_BOTTOM = 4;
 
   public static final int LEFT_TRIGGER = 2;
   public static final int RIGHT_TRIGGER = 3;
